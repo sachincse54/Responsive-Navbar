@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@300;400;500;600;700;800;900&display=swap');
+:root{
+    --header-height: 60px;
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html,body{
+    font-family: 'Orbitron', sans-serif;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+a,button{
+    all: unset;
+    cursor: pointer;
+}
+li,ul{
+    list-style: none;
+}
+
+
+
+/* header css */
+.scroll-header{
+    box-shadow: 0 -1px 4px #cc2bf83d;
+}
+header{
+    height: var(--header-height);
+    width: 100%;
+    z-index: 100;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #fff;
+}
+header nav{
+    margin: 0 10%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header nav .nav_logo{
+    display: flex;
+    gap: 3px;
+    align-items: center;
+}
+header nav .nav_logo img{
+    width: 40px;
+    height: 30px;
+}
+header nav .nav_logo span{
+    font-size: 20px;
+    font-weight: 700;
+    background: #28B7E2;
+    background: -webkit-linear-gradient(to right, #28B7E2 0%, #CA2BF8 100%);
+    background: -moz-linear-gradient(to right, #28B7E2 0%, #CA2BF8 100%);
+    background: linear-gradient(to right, #28B7E2 0%, #CA2BF8 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+header nav ul{
+    display: flex;
+    gap: 15px;
+}
+header nav ul i{
+    display: none;
+}
+header nav ul{
+    width: max-content;
+    height: max-content;
+}
+header nav ul li a{
+    color: #000000c3;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+header nav ul li a:hover{
+    color: #CA2BF8;
+}
+
+.active-link{
+    color: #CA2BF8;
+}
+
+/* sections css */
+.info{
+    width: 100%;
+    height: calc(100vh - 60px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.info h2{
+    text-align-last: center;
+}
+
+/* footer css */
+footer{
+    margin-top: 20px;
+    padding: 20px;
+    border-top: 1px solid #0000001f;
+    text-align: center;
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+}
+footer span{
+    font-weight: 600;
+    color: #00000084;
+}
+footer a{
+    letter-spacing: 1px;
+    font-weight: 700;
+    color: #000000c3;
+}
+footer a:hover{
+    text-decoration: underline;
+}
+
+
+/* css for mobile and tab devices */
+@media screen and (max-width:600px) {
+    header {
+        position: fixed;
+        bottom: 0;
+        top: auto;
+        background: white;
+        border-top-right-radius: 10px;
+        border-top-left-radius: 10px;
+    }
+    header nav{
+        margin: 0 3%;
+        justify-content: center;
+    }
+    header nav .nav_logo{
+        display: none;
+    }
+    header nav ul{
+        width: 100%;
+        display: flex;
+        gap: 5px;
+        justify-content: space-between;
+    }
+    header nav ul li a{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+    }
+    header nav ul li a i{
+        display: flex;
+        font-size: 14px;
+    }
+    header nav ul li a p{
+        font-size: 10px;
+    }
+}
